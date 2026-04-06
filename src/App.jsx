@@ -9,6 +9,9 @@ import Contact from './Pages/Contact'
 import Blog from './Pages/Blog'
 import BlogDescription from './Pages/Blog-desc'
 import Crops from './Pages/Crops'
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const App = () => {
   return (
@@ -17,12 +20,12 @@ const App = () => {
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          {/* <Route path='/about-us' element={<About/>}></Route>
+          <Route path='/about-us' element={<About/>}></Route>
           <Route path='/gallery' element={<Gallery/>}></Route>
           <Route path='/contact-us' element={<Contact/>}></Route>
           <Route path='/blogs' element={<Blog/>}></Route>
           <Route path='/blog/1' element={<BlogDescription/>}></Route>
-          <Route path='/crops' element={<Crops/>}></Route> */}
+          <Route path='/crops' element={<Crops/>}></Route>
 
         </Routes>
         <Footer/>

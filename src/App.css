@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap');
+        
+        .font-heading { 
+            font-family: 'Philosopher', sans-serif !important; 
+        }
+        
+        .pill-tag { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; padding: 8px 20px; border-radius: 50px; display: inline-block; }
+        
+        .floating-card { animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, 0) rotate(12deg); }
+            50% { transform: translate(-50%, -20px) rotate(12deg); }
+        }
+        
+        /* Swiper Pagination - Updated to #2E7D32 */
+        .swiper-pagination-bullet-active {
+            background: #2E7D32 !important;
+            width: 24px !important;
+            border-radius: 10px !important;
+        }
+        
+        .hero-slider .swiper-slide-active img {
+            animation: kenburns 20s ease-out both;
+        }
+        
+        @keyframes kenburns {
+            0% { transform: scale(1) translate(0,0); }
+            100% { transform: scale(1.2) translate(-2%, -2%); }
+        }
+        
+        .hero-content-anim {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        .swiper-slide-active .hero-content-anim {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-1 { transition-delay: 0.2s; }
+        .delay-2 { transition-delay: 0.4s; }
+        .delay-3 { transition-delay: 0.6s; }
+        
+        .testSwiper .swiper-pagination-bullet { 
+            background: #2E7D32; 
+            opacity: 0.3; 
+            width: 10px; 
+            height: 10px; 
+            margin: 0 6px !important;
+        }
+        
+        .testSwiper .swiper-pagination-bullet-active { 
+            background: #2E7D32 !important; 
+            width: 30px; 
+            border-radius: 10px; 
+            opacity: 1;
+        }
+
+        .mySwiper .swiper-pagination {
+            bottom: -40px !important;
+        }
+        .mySwiper {
+            overflow: visible !important;
+        }
+
+@media(max-width: 767px){
+  .diss{
+    display: none;
+  }
+}

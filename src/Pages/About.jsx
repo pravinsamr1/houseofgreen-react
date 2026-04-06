@@ -1,16 +1,20 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import BreadcrumbHero from '../Components/Bread';
 
 const About = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
 
     document.title = "About House Of Green";
+    window.scrollTo(0,0);
   }, []);
 
   return (
+    
     <div className="bg-[#fdfdfb] text-slate-800 font-sans overflow-x-hidden">
+        <BreadcrumbHero title="About Us" />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap');
         .font-heading { font-family: 'Philosopher', sans-serif !important; }
@@ -20,23 +24,6 @@ const About = () => {
         .animate-float { animation: float 4s ease-in-out infinite; }
       `}</style>
 
-      {/* --- Hero Section --- */}
-      <header className="pt-32 pb-20 hero-gradient text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <img src="https://www.transparenttextures.com/patterns/leaf.png" className="w-full h-full" alt="pattern" />
-        </div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="max-w-3xl" data-aos="fade-up">
-            <span className="pill-tag bg-white/10 text-[#e1e7d1] mb-6">Established 2016</span>
-            <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight mb-6">
-              Growing a Healthier <br /> Future for Chennai
-            </h1>
-            <p className="text-[#e1e7d1]/80 text-lg leading-relaxed">
-              We are more than just a terrace farming service; we are a movement dedicated to reclaiming urban spaces.
-            </p>
-          </div>
-        </div>
-      </header>
 
       {/* --- Vision & Mission --- */}
       <section className="py-20 px-6">

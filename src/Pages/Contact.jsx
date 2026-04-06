@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import BreadcrumbHero from '../Components/Bread';
 
 const Contact = () => {
     useEffect(() => {
@@ -8,6 +9,8 @@ const Contact = () => {
             duration: 1000, 
             once: true 
         });
+
+        window.scrollTo(0,0);
     }, []);
 
     const handleSubmit = (e) => {
@@ -48,19 +51,10 @@ const Contact = () => {
                 }
             `}</style>
 
-            {/* Header Section */}
-            <section className="pt-40 pb-16 px-6 bg-[#f2f4f0]">
-                <div className="max-w-7xl mx-auto text-center" data-aos="fade-up">
-                    <span className="pill-tag bg-white text-[#4F772D] mb-6 shadow-sm">Get In Touch</span>
-                    <h1 className="text-4xl md:text-6xl font-bold font-heading text-[#132A13] mb-6">Let's Grow Together</h1>
-                    <p className="text-slate-500 max-w-2xl mx-auto text-lg">
-                        Have questions about setting up your rooftop farm? Our experts in Chennai are ready to help you harvest your first organic crop.
-                    </p>
-                </div>
-            </section>
+            <BreadcrumbHero title="Contact Us" />
 
             {/* Main Contact Section */}
-            <section className="py-20 px-6">
+            <section className="pt-15 pb-10 px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-12 gap-16">
                         
@@ -145,9 +139,9 @@ const Contact = () => {
             </section>
 
             {/* Map Section */}
-            <section className="py-12 px-6">
+            <section >
                 <div className="max-w-full mx-auto">
-                    <div className="rounded-[2rem] overflow-hidden shadow-xl" data-aos="zoom-in">
+                    <div className="overflow-hidden" data-aos="zoom-in">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124361.32637688467!2d80.15598642750372!3d13.048943787754358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d333f%3A0x6d3944d18db172f3!2sAnna%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1712345678900!5m2!1sen!2sin"
                             className="w-full h-[450px] border-0 grayscale-[0.2] contrast-[1.1]"

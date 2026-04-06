@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, Link, useLocation } from 'react-router-dom'
+import '../App.css'
+import logo from '../assets/img/logo.png'
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -39,12 +41,7 @@ const Navbar = () => {
                     onClick={() => navigate('/')} 
                     className="flex items-center gap-2 group cursor-pointer relative z-[110]"
                 >
-                    <div className="bg-[#31572C] p-2 rounded-xl text-white shadow-lg group-hover:rotate-12 transition-transform">
-                        <i className="fas fa-seedling text-xl"></i>
-                    </div>
-                    <span className="text-xl md:text-2xl font-bold font-heading text-[#132A13] tracking-tight">
-                        houseofgreen
-                    </span>
+                    <img src={logo} alt="" className='w-[250px]' />
                 </div>
 
                 {/* Desktop Navigation Links */}
@@ -54,7 +51,7 @@ const Navbar = () => {
                             key={link.name}
                             to={link.path}
                             className={`transition cursor-pointer underline-offset-8 hover:underline decoration-[#90a955] ${
-                                isActive(link.path) ? 'text-[#8aac1c] underline' : 'hover:text-[#8aac1c]'
+                                isActive(link.path) ? 'text-[#2E7D32] underline' : 'hover:text-[#2E7D32]'
                             }`}
                         >
                             {link.name}
@@ -65,7 +62,7 @@ const Navbar = () => {
                 {/* Desktop Action Button */}
                 <button 
                     onClick={() => navigate('/contact-us')}
-                    className="hidden lg:block bg-[#8aac1c] text-white px-8 py-3 rounded-xl font-bold hover:brightness-105 shadow-xl transition active:scale-95"
+                    className="hidden lg:block bg-[#2E7D32] text-white px-8 py-3 rounded-xl font-bold hover:brightness-105 shadow-xl transition active:scale-95"
                 >
                     Contact Us
                 </button>
@@ -115,7 +112,7 @@ const Navbar = () => {
                                 key={link.name}
                                 to={link.path}
                                 className={`text-3xl font-bold font-heading transition-colors ${
-                                    isActive(link.path) ? 'text-[#8aac1c]' : 'text-[#132A13]'
+                                    isActive(link.path) ? 'text-[#2E7D32]' : 'text-[#132A13]'
                                 }`}
                                 onClick={() => setIsMenuOpen(false)}
                             >
@@ -125,7 +122,7 @@ const Navbar = () => {
                     </div>
                     
                     {/* Decorative Background Element */}
-                    <div className="absolute bottom-10 right-10 opacity-10 text-[200px] text-[#8aac1c] -rotate-12 pointer-events-none">
+                    <div className="absolute bottom-10 right-10 opacity-10 text-[200px] text-[#2E7D32] -rotate-12 pointer-events-none">
                         <i className="fas fa-leaf"></i>
                     </div>
                 </div>

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const BlogDescription = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  })
 
   return (
     <div className="bg-[#fdfdfb] pt-40 pb-20 px-6">

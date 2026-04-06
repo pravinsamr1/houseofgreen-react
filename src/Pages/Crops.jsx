@@ -1,12 +1,14 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import BreadcrumbHero from '../Components/Bread';
 
 const Crops = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
+    window.scrollTo(0,0);
   }, []);
 
   const plantData = [
@@ -29,7 +31,8 @@ const Crops = () => {
   }, [searchTerm]);
 
   return (
-    <div className="bg-[#fdfdfb] pt-32 pb-20 min-h-screen">
+    <div className="bg-[#fdfdfb] pb-20 min-h-screen">
+        <BreadcrumbHero title="Crop Directory" />
       <style>{`
         .font-heading { font-family: 'Philosopher', serif; }
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
@@ -37,6 +40,8 @@ const Crops = () => {
         /* Custom selection and focus colors */
         input:focus { border-color: #00aa40 !important; outline: none; box-shadow: 0 0 0 4px rgba(0, 170, 64, 0.05); }
       `}</style>
+
+      
 
       <section className="px-6 max-w-7xl mx-auto">
         {/* Header Area */}
@@ -48,7 +53,7 @@ const Crops = () => {
 
           {/* Search Box */}
           <div className="relative w-full md:w-80" data-aos="fade-left">
-            <i className="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <i className="fas fa-search absolute left-4 top-[65%] -translate-y-1/2 text-slate-400"></i>
             <input 
               type="text" 
               placeholder="Search plants..."

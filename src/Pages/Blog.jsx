@@ -2,12 +2,14 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import BreadcrumbHero from '../Components/Bread';
 
 const Blog = () => {
   const navigate = useNavigate();
   
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+    window.scrollTo(0,0);
   }, []);
 
   const blogs = [
@@ -38,18 +40,10 @@ const Blog = () => {
   ];
 
   return (
-    <div className="bg-[#fdfdfb] pt-32 pb-20">
-      <section className="px-6 mb-16 text-center">
-        <div className="max-w-3xl mx-auto" data-aos="fade-up">
-          <span className="inline-block text-[11px] font-extrabold uppercase tracking-widest px-5 py-2 rounded-full bg-[#e1e7d1] text-[#31572C] mb-6">
-            Green Journal
-          </span>
-          <h1 className="text-4xl md:text-6xl font-bold font-heading text-[#132A13] mb-6">Latest from HouseofGreen</h1>
-          <p className="text-slate-500 text-lg">Expert advice, success stories, and technical guides for urban farmers in Chennai.</p>
-        </div>
-      </section>
+    <div className="bg-[#fdfdfb] pb-20">
+        <BreadcrumbHero title="Our Blog" />
 
-      <section className="px-6 max-w-7xl mx-auto">
+      <section className="px-6 pt-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {blogs.map((blog, index) => (
             <div 

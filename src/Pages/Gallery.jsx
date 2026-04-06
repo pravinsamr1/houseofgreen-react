@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import BreadcrumbHero from '../Components/Bread';
 
 const Gallery = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ const Gallery = () => {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+    window.scrollTo(0,0);
     
     // Keyboard Navigation
     const handleKeyDown = (e) => {
@@ -75,23 +77,10 @@ const Gallery = () => {
         .gallery-overlay:hover::after { opacity: 1; }
       `}</style>
 
-      {/* Header Section */}
-      <section className="pt-32 pb-16 px-6 text-center bg-[#f2f4f0]">
-        <div className="max-w-3xl mx-auto" data-aos="fade-up">
-          <span className="pill-tag bg-white text-[#4F772D] mb-6 shadow-sm border border-[#e1e7d1]">
-            Visual Journey
-          </span>
-          <h1 className="text-4xl md:text-6xl font-bold font-heading text-[#132A13] mb-6">
-            Our Green Gallery
-          </h1>
-          <p className="text-slate-500">
-            Explore the transformation of concrete rooftops into flourishing organic havens across Chennai.
-          </p>
-        </div>
-      </section>
+      <BreadcrumbHero title={"Gallery"}/>
 
       {/* Gallery Grid */}
-      <section className="py-20 px-6">
+      <section className="py-15 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {images.map((img, index) => (
