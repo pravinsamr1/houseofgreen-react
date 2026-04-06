@@ -18,6 +18,8 @@ const Home = () => {
       once: true,
       offset: 100,
     });
+
+    document.title = "House Of Green - Revolutionizing Urban Farming in Chennai";
   }, []);
 
   return (
@@ -220,7 +222,7 @@ const Home = () => {
                 <img src={serviceImage} alt="Decorative" className="w-full h-full object-cover opacity-20" />
             </div>
             <div className="absolute top-0 -left-10 w-full md:w-3/5 h-full bg-[#132A13] -z-10 rounded-br-[4rem]"></div>
-            <div className="w-full md:w-1/2 text-white p-6 md:p-10 md:pl-24" data-aos="fade-right">
+            <div className="w-full md:w-1/2 text-black p-6 md:p-10 md:pl-24" data-aos="fade-right">
               <span className="text-xs tracking-[0.3em] opacity-70 uppercase font-bold block mb-2">Service Excellence</span>
               <h2 className="text-4xl md:text-6xl font-bold mt-2 leading-tight font-heading">Providing Premium <br /> Agro Services</h2>
             </div>

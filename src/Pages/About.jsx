@@ -5,6 +5,8 @@ import 'aos/dist/aos.css';
 const About = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+
+    document.title = "About House Of Green";
   }, []);
 
   return (
