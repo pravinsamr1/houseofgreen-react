@@ -11,6 +11,8 @@ const Contact = () => {
         });
 
         window.scrollTo(0,0);
+
+        document.title = "Contact Us | House of Green";
     }, []);
 
     const handleSubmit = (e) => {

@@ -12,6 +12,8 @@ import Crops from './Pages/Crops'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import ScrollToTop from './Components/Scroll'
+import Testimonials from './Pages/Testimonials'
 
 const App = () => {
   return (
@@ -26,9 +28,10 @@ const App = () => {
           <Route path='/blogs' element={<Blog/>}></Route>
           <Route path='/blog/1' element={<BlogDescription/>}></Route>
           <Route path='/crops' element={<Crops/>}></Route>
-
+          <Route path='/testimonials' element={<Testimonials/>}></Route>
         </Routes>
         <Footer/>
+        <ScrollToTop/>
       </Router>
     </div>
   )

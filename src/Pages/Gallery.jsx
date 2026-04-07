@@ -18,6 +18,9 @@ const Gallery = () => {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+
+    document.title = "Gallery | House of Green";
+
     window.scrollTo(0,0);
     
     // Keyboard Navigation

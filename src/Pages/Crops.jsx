@@ -8,6 +8,9 @@ const Crops = () => {
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
+
+    window.document.title = "Crop Directory | House of Green";
+
     window.scrollTo(0,0);
   }, []);
 
@@ -43,7 +46,7 @@ const Crops = () => {
 
       
 
-      <section className="px-6 max-w-7xl mx-auto">
+      <section className="px-6 pt-10 md:pt-13 max-w-7xl mx-auto">
         {/* Header Area */}
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-6">
           <div data-aos="fade-right">

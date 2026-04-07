@@ -19,7 +19,7 @@ const BreadcrumbHero = ({ title }) => {
       </div>
 
       {/* Content */}
-      <div className=" relative z-10 text-center px-6 pt-25" data-aos="fade-up">
+      <div className=" relative z-10 text-center px-6 pt-15 md:pt-25" data-aos="fade-up">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-heading tracking-tight">
           {title}
         </h1>
@@ -53,11 +53,23 @@ const BreadcrumbHero = ({ title }) => {
       </div>
 
       {/* Decorative Bottom Wave (Optional - adds a nice transition to the next section) */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] transform rotate-180">
-        <svg className="relative block w-full h-[40px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C58.42,88.5,142,101.4,212.11,105.8c64.76,4.08,118.66-12.52,151.16-21.31Z" fill="#ffffff"></path>
-        </svg>
-      </div>
+      <div className="absolute -bottom-[2px] left-[-1px] w-[calc(100%+2px)] overflow-hidden leading-[0] pointer-events-none">
+  <svg 
+    className="relative block w-full h-[40px] transform scale-y-[-1.02] scale-x-[1.01]" 
+    data-name="Layer 1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 1200 120" 
+    preserveAspectRatio="none"
+    shapeRendering="crispEdges"
+  >
+    <path 
+      d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C58.42,88.5,142,101.4,212.11,105.8c64.76,4.08,118.66-12.52,151.16-21.31Z" 
+      fill="#ffffff"
+      stroke="#ffffff"
+      strokeWidth="1"
+    ></path>
+  </svg>
+</div>
     </section>
   );
 };

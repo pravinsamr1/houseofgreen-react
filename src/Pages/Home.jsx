@@ -61,7 +61,7 @@ const Home = () => {
                 <h1 className="hero-content-anim delay-1 text-5xl md:text-7xl font-bold text-white leading-tight mb-6 font-heading">Bring Growth to Fresh Agriculture</h1>
                 <p className="hero-content-anim delay-2 text-[#f2f4f0]/80 text-base md:text-lg mb-10 leading-relaxed">Revolutionizing urban spaces into high-yield organic havens. We build the future of food, right on your rooftop.</p>
                 <div className="hero-content-anim delay-3">
-                  <button className="bg-[#bc6c25] text-white px-10 py-4 rounded-xl font-bold hover:brightness-110 transition flex items-center gap-3 active:scale-95 shadow-lg">
+                  <button className="bg-[#2e7d32] text-white px-10 py-4 rounded-xl font-bold hover:brightness-110 transition flex items-center gap-3 active:scale-95 shadow-lg">
                     Discover More <i className="fas fa-arrow-right-long text-sm -rotate-45"></i>
                   </button>
                 </div>
@@ -174,7 +174,7 @@ const Home = () => {
             <div className="w-full md:w-1/3 p-6 md:pb-12 diss" data-aos="fade-left">
               <p className="text-black text-xl font-bold leading-relaxed mb-6">We streamline the journey from seed to harvest.</p>
               <a href="#" className="text-[#2E7D32] font-bold text-sm flex items-center gap-2">
-                <span className="bg-[#132A13] text-white p-3 rounded-2xl hover:bg-[#2E7D32] transition">View All Services <span className="text-lg">↗</span></span>
+                <span className="bg-[#132A13] text-white py-3 px-5 rounded-2xl bg-[#2E7D32] hover:bg-[#2E7D32] transition">View All Services <span className="text-lg">↗</span></span>
               </a>
             </div>
           </div>
@@ -251,7 +251,7 @@ const Home = () => {
                 </div>
                 <div className="hidden md:block">
                     <a href="https://www.youtube.com/@YourChannel" target="_blank" rel="noreferrer" 
-                       className="bg-[#132A13] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#2E7D32] transition shadow-xl flex items-center gap-3">
+                       className="bg-[#132A13] text-white px-8 py-4 rounded-xl font-bold bg-[#2E7D32] hover:bg-[#2E7D32] transition shadow-xl flex items-center gap-3">
                         Visit YouTube Channel <i className="fab fa-youtube text-xl"></i>
                     </a>
                 </div>
