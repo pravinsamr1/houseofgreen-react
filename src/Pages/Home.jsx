@@ -32,6 +32,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
+import OfferMarquee from '../Components/Marquee';
 
 
 const services = [
@@ -133,55 +134,7 @@ const Home = () => {
       </section>
 
       {/* Quick Stats */}
-      <section className="relative z-40 -mt-12 md:-mt-16 ">
-  <div className="max-w-6xl mx-auto px-4">
-    <div className="bg-[#2E7D32] rounded-3xl h-auto p-6 md:p-10 grid md:grid-cols-3 gap-8 text-white shadow-[0_20px_50px_rgba(46,125,50,0.3)] border border-white/10" data-aos="fade-up">
-      
-      {/* Offer 1: Seasonal Discount */}
-      <div className="relative group flex items-center gap-5 md:border-r border-white/20 pr-4 last:border-r-0">
-        <div className="flex-shrink-0 bg-white/10 p-3 rounded-2xl group-hover:bg-white/20 transition-colors">
-          <img src={icon} alt="Lifestyle" className='w-12 h-12 object-contain' />
-        </div>
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-             <span className="bg-[#C5E1A5] text-[#132A13] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">Save 20%</span>
-          </div>
-          <p className="text-xl font-bold leading-tight">Green Lifestyle</p>
-          <p className="text-[11px] text-[#e1e7d1] mt-1 leading-relaxed">Setup your terrace garden at special seasonal rates.</p>
-        </div>
-      </div>
-
-      {/* Offer 2: Free Consultation */}
-      <div className="relative group flex items-center gap-5 md:border-r border-white/20 pr-4 last:border-r-0">
-        <div className="flex-shrink-0 bg-white/10 p-3 rounded-2xl group-hover:bg-white/20 transition-colors">
-          <img src={icon1} alt="Air Quality" className='w-12 h-12 object-contain' />
-        </div>
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-             <span className="bg-orange-400 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">Limited Time</span>
-          </div>
-          <p className="text-xl font-bold leading-tight">Free Site Visit</p>
-          <p className="text-[11px] text-[#e1e7d1] mt-1 leading-relaxed">Book a free expert consultation for your urban home.</p>
-        </div>
-      </div>
-
-      {/* Offer 3: Starter Kit */}
-      <div className="relative group flex items-center gap-5">
-        <div className="flex-shrink-0 bg-white/10 p-3 rounded-2xl group-hover:bg-white/20 transition-colors">
-          <img src={icon2} alt="Harvest" className='w-12 h-12 object-contain' />
-        </div>
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-             <span className="bg-white text-[#2E7D32] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">New Bundle</span>
-          </div>
-          <p className="text-xl font-bold leading-tight">Harvest Kits</p>
-          <p className="text-[11px] text-[#e1e7d1] mt-1 leading-relaxed">Get 3 organic fertilizers free with your first seed box.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    <OfferMarquee/>
 
       {/* About Section */}
       <section id="about" className="pb-13 md:pb-22 px-6 pt-12 max-w-7xl mx-auto overflow-hidden">
@@ -314,46 +267,16 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Seasonal Picks */}
-      <section id="crops" className="pb-16 md:pb-16 pt-14">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8 md:mb-20" data-aos="fade-up">
-      <span className="pill-tag bg-white text-[#2E7D32] mb-4 shadow-sm border border-slate-100">
-        Grow at Home
-      </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-[#132A13] font-heading">
-              Fresh Picks for Your Terrace Garden
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-            {[
-              { name: 'Juicy Cherry Tomatoes', img: 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&q=80&w=500' },
-              { name: 'Spicy Green Chillies', img: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800' },
-              { name: 'Fresh Leafy Greens', img: 'https://images.unsplash.com/photo-1557844352-761f2565b576?auto=format&fit=crop&q=80&w=500' },
-              { name: 'Healthy Brinjals', img: 'https://images.unsplash.com/photo-1592394533824-9440e5d68530?auto=format&fit=crop&q=80&w=500' }
-            ].map((crop, i) => (
-                <div key={i} className="group" data-aos="fade-up" data-aos-delay={i * 100}>
-                  <div className="rounded-3xl overflow-hidden mb-4 aspect-square shadow-md border-4 border-white">
-                    <img src={crop.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={crop.name}/>
-                  </div>
-                  <h4 className="font-bold text-[#132A13] text-center text-lg">
-                    {crop.name}
-                  </h4>
-                </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Videos Section */}
-      <section id="videos" className="pb-8 pt-8 md:mt-16 md:pb-16 px-6 bg-[#fbfef2]">
+      <section id="videos" className="pb-8 pt-8 md:mt-4 md:pb-16 px-6 ">
         <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
                 <div className="max-w-2xl">
                     <span className="pill-tag bg-[#f2f4f0] text-[#2E7D32] mb-4">Video Tutorials</span>
                     <h2 className="text-3xl md:text-5xl font-bold text-[#132A13] font-heading leading-tight">
-                        Watch & Learn How to  Grow Your Own Food
+                        Watch & Learn 
                     </h2>
                 </div>
                 <div className="hidden md:block">
@@ -388,7 +311,7 @@ const Home = () => {
       </section>
 
       {/* Blog Section */}
-      <section className="pt-8 md:pt-16 pb-8 md:pb-10  px-6 overflow-hidden bg-white">
+      <section className="pt-8 md:pt-16 pb-8 md:pb-10  px-6 overflow-hidden bg-[#fbfef2]">
   <div className="max-w-7xl mx-auto">
     <div className="text-center mb-5 md:mb-16" data-aos="fade-up">
       <span className="pill-tag bg-[#f2f4f0] text-[#2E7D32] mb-4 inline-block px-4 py-1 rounded-full text-sm font-bold">
@@ -445,72 +368,79 @@ const Home = () => {
 </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="relative pt-10  pb-1 md:py-16 bg-[#fbfef2] overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-12 gap-16 items-center">
-            <div className="lg:col-span-5 relative" data-aos="fade-right">
-              <span className="text-[#bc6c25] font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">Success Stories</span>
-              <h2 className="text-3xl md:text-5xl font-bold text-[#132A13] font-heading leading-tight">Real Harvests <br /> from Real People</h2>
-              
-
-              <div className="relative aspect-[4/5] h-auto max-h-[440px] md:max-h-none rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white mt-8">
-  <img 
-    src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=800" 
-    className="w-full h-full object-cover" 
-    alt="Garden Harvest" 
-  />
-</div>
-            </div>
-            <div className="lg:col-span-7 lg:pl-16" data-aos="fade-left">
-              <Swiper
-                modules={[Autoplay, Pagination]}
-                slidesPerView={1}
-                spaceBetween={40}
-                loop={true}
-                autoplay={{ delay: 5000 }}
-                pagination={{ clickable: true }}
-                className="testSwiper !pb-16"
-              >
-                <SwiperSlide>
-                  <div className="bg-slate-50 p-8 md:p-14 rounded-[2rem] border border-slate-100">
-                    <div className="flex gap-1 text-[#2E7D32] mb-8">
-                      <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
-                    </div>
-                    <p className="text-[#132A13] text-xl md:text-2xl leading-relaxed italic mb-10 font-medium font-heading">
-                      "HouseofGreen transformed my boring 400sqft terrace into a lush vegetable haven."
-                    </p>
-                    <div className="flex items-center gap-5">
-                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" className="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" alt="Client" />
-                      <div>
-                        <h4 className="text-[#132A13] font-bold text-lg font-heading">Pravin Sam</h4>
-                        <p className="text-slate-400 text-xs uppercase tracking-widest font-bold">Chennai Homeowner</p>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className="bg-slate-50 p-8 md:p-14 rounded-[2rem] border border-slate-100">
-                    <div className="flex gap-1 text-[#2E7D32] mb-8">
-                      <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
-                    </div>
-                    <p className="text-[#132A13] text-xl md:text-2xl leading-relaxed italic mb-10 font-medium font-heading">
-                      "HouseofGreen transformed my boring 400sqft terrace into a lush vegetable haven."
-                    </p>
-                    <div className="flex items-center gap-5">
-                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" className="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" alt="Client" />
-                      <div>
-                        <h4 className="text-[#132A13] font-bold text-lg font-heading">Pravin Sam</h4>
-                        <p className="text-slate-400 text-xs uppercase tracking-widest font-bold">Chennai Homeowner</p>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
-          </div>
+      <section id="testimonials" className="relative pt-10 pb-1 md:py-16 bg-white overflow-hidden">
+  <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+    <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
+      
+      {/* Left Column */}
+      <div className="lg:col-span-5 flex flex-col h-full" data-aos="fade-right">
+        <span className="text-[#bc6c25] font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">Success Stories</span>
+        <h2 className="text-3xl md:text-5xl font-bold text-[#132A13] font-heading leading-tight mb-8">
+          Real Harvests <br /> from Real People
+        </h2>
+        
+        <div className="relative flex-1 min-h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white hidden lg:block">
+          <img 
+            src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=800" 
+            className="absolute inset-0 w-full h-full object-cover" 
+            alt="Garden Harvest" 
+          />
         </div>
-      </section>
+      </div>
+
+      {/* Right Column - ADDED 'min-w-0' HERE */}
+      <div className="lg:col-span-7 flex flex-col h-full lg:pt-16 min-w-0" data-aos="fade-left">
+        <div className="h-full relative">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            slidesPerView={1}
+            spaceBetween={40}
+            loop={true}
+            autoplay={{ delay: 5000 }}
+            pagination={{ clickable: true }}
+            className="testSwiper flex-1 !pb-16 h-full w-full" /* Added w-full */
+          >
+            <SwiperSlide className="h-auto"> {/* Changed h-full to h-auto for better internal flex */}
+              <div className="bg-slate-50 p-8 md:p-14 rounded-[2rem] border border-slate-100 h-full flex flex-col justify-center">
+                <div className="flex gap-1 text-[#2E7D32] mb-8">
+                  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
+                </div>
+                <p className="text-[#132A13] text-lg md:text-xl leading-relaxed italic mb-10 font-medium font-heading">
+                  "House of Green transformed my boring 400sqft terrace into a lush vegetable haven. I used to think urban farming was impossible, but their expert team guided me through every step. Now, my family enjoys pesticide-free tomatoes and spinach every single day right from our rooftop. It is truly life-changing and sustainable!"
+                </p>
+                <div className="flex items-center gap-5 mt-auto">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" className="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" alt="Client" />
+                  <div>
+                    <h4 className="text-[#132A13] font-bold text-lg font-heading">Pravin Sam</h4>
+                    <p className="text-slate-400 text-xs uppercase tracking-widest font-bold">Chennai Homeowner</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide className="h-auto">
+              <div className="bg-slate-50 p-8 md:p-14 rounded-[2rem] border border-slate-100 h-full flex flex-col justify-center">
+                <div className="flex gap-1 text-[#2E7D32] mb-8">
+                  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
+                </div>
+                <p className="text-[#132A13] text-lg md:text-xl leading-relaxed italic mb-10 font-medium font-heading">
+                  "Working with this team was the best decision for our home. The automated irrigation system they installed makes maintenance a breeze, even with my busy schedule. We've successfully harvested organic herbs and gourds that taste infinitely better than store-bought ones. Our terrace has become the most beautiful, green, and peaceful part of our house."
+                </p>
+                <div className="flex items-center gap-5 mt-auto">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" className="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" alt="Client" />
+                  <div>
+                    <h4 className="text-[#132A13] font-bold text-lg font-heading">Anitha Raj</h4>
+                    <p className="text-slate-400 text-xs uppercase tracking-widest font-bold">Urban Gardener</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 };

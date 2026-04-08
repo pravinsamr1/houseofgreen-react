@@ -1,6 +1,10 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 
 const ProductsPage = () => {
+
+     useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [maxPrice, setMaxPrice] = useState(2000);
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
@@ -28,7 +32,8 @@ const ProductsPage = () => {
     const message = `Hi House of Green! I'm interested in: \n*Product:* ${product.name}\n*Price:* ₹${product.sellingPrice}`;
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
-
+  
+  
   // Shared Filter Content to avoid duplication
   const FilterContent = () => (
     <>
@@ -82,6 +87,8 @@ const ProductsPage = () => {
       </button>
     </>
   );
+
+  
 
   return (
     <div className="bg-gray-50 min-h-screen pt-28 pb-20">
