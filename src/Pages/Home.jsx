@@ -40,7 +40,7 @@ const Home = () => {
       
 
       {/* Hero Slider */}
-      <section id="home" className="relative pt-20 overflow-hidden">
+      <section id="home" className="relative pt-15 overflow-hidden">
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
           effect="fade"

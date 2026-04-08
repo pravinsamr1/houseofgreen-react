@@ -6,7 +6,12 @@ import BreadcrumbHero from '../Components/Bread';
 const Testimonials = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+
+    window.scrollTo(0,0);
+
+    document.title = "Testimonials | House of Green";
   }, []);
+
 
   const mediaReviews = [
     {

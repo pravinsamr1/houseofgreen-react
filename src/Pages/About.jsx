@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     
-    <div className="bg-[#fdfdfb] text-slate-800 font-sans overflow-x-hidden">
+    <div className="bg-[#fff] text-slate-800 font-sans overflow-x-hidden">
         <BreadcrumbHero title="About Us" />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap');
