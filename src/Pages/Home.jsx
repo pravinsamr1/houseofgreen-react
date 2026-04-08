@@ -11,15 +11,51 @@ import '../App.css'
 
 import banner from '../assets/img/banner.jpg'
 import banner1 from '../assets/img/banner1.jpg'
+import banner2 from '../assets/img/banner2.jpg'
+import homeService from '../assets/img/home-service.png'
 import icon from '../assets/img/home-icon1.png'
 import icon1 from '../assets/img/home-icon2.png'
 import icon2 from '../assets/img/home-icon3.png'
+
+import aboutImg from  '../assets/img/home-about.jpg'
+import aboutImg1 from  '../assets/img/home-about1.jpg'
+
+
+import s1 from  '../assets/img/s1.jpg'
+import s2 from  '../assets/img/s2.jpg'
+import s3 from  '../assets/img/s3.jpg'
+import s4 from  '../assets/img/s4.jpg'
+
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
+
+
+const services = [
+  {
+    title: "Terrace Garden Setup",
+    desc: "Complete rooftop transformation with grow beds, soil setup, and plant selection tailored to your space and sunlight.",
+    img: s1,
+  },
+  {
+    title: "Automated Irrigation",
+    desc: "Smart drip irrigation systems that save water and ensure your plants stay healthy with minimal effort.",
+    img: s2,
+  },
+  {
+    title: "Organic Gardening",
+    desc: "Chemical-free gardening using compost, natural fertilizers, and eco-friendly pest control solutions.",
+    img: s3,
+  },
+  {
+    title: "Maintenance & Support",
+    desc: "Regular care, plant health monitoring, and expert guidance to keep your garden thriving year-round.",
+    img: s4,
+  },
+];
 
 const Home = () => {
   useEffect(() => {
@@ -57,9 +93,15 @@ const Home = () => {
             </div>
             <div className="relative z-20 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
               <div className="max-w-2xl">
-                <span className="hero-content-anim text-[#e1e7d1] font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Certified Organic Solutions</span>
-                <h1 className="hero-content-anim delay-1 text-5xl md:text-7xl font-bold text-white leading-tight mb-6 font-heading">Bring Growth to Fresh Agriculture</h1>
-                <p className="hero-content-anim delay-2 text-[#f2f4f0]/80 text-base md:text-lg mb-10 leading-relaxed">Revolutionizing urban spaces into high-yield organic havens. We build the future of food, right on your rooftop.</p>
+    <span className="hero-content-anim text-[#e1e7d1] font-bold tracking-[0.2em] uppercase text-xs mb-4 block">
+      Sustainable Urban Gardening
+    </span>
+                <h1 className="hero-content-anim delay-1 text-5xl md:text-7xl font-bold text-white leading-tight mb-6 font-heading">
+                  Transform Your Terrace into a Green Paradise
+                </h1>
+                <p className="hero-content-anim delay-2 text-[#f2f4f0]/80 text-base md:text-lg mb-10 leading-relaxed">
+                  Turn your rooftop into a thriving garden with fresh vegetables, herbs, and greens. We help you create beautiful, eco-friendly spaces right at home.
+                </p>
                 <div className="hero-content-anim delay-3">
                   <button className="bg-[#2e7d32] text-white px-10 py-4 rounded-xl font-bold hover:brightness-110 transition flex items-center gap-3 active:scale-95 shadow-lg">
                     Discover More <i className="fas fa-arrow-right-long text-sm -rotate-45"></i>
@@ -72,7 +114,7 @@ const Home = () => {
           <SwiperSlide>
             <div className="absolute inset-0 bg-[#132A13]">
               <div className="absolute inset-0 bg-gradient-to-r from-[#132A13]/80 via-[#132A13]/40 to-transparent z-10"></div>
-              <img src={banner1} className="w-full h-full object-cover" alt="Terrace Garden" />
+              <img src={banner2} className="w-full h-full object-cover" alt="Terrace Garden" />
             </div>
             <div className="relative z-20 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
               <div className="max-w-2xl">
@@ -92,42 +134,64 @@ const Home = () => {
 
       {/* Quick Stats */}
       <section className="relative z-40 -mt-12 md:-mt-16 ">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="bg-[#2E7D32] rounded-2xl h-auto md:h-[150px] p-6 md:p-8 grid md:grid-cols-3 gap-8 text-white shadow-2xl" data-aos="fade-up">
-            <div className="flex items-center gap-4 md:border-r border-white/10 last:border-r-0">
-              <img src={icon} alt="" className='w-[70px]' />
-              <div>
-                <p className="text-2xl md:text-3xl font-bold">40%+ Yield</p>
-                <p className="text-[10px] text-[#e1e7d1] uppercase tracking-widest">Maximize rooftop harvest.</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 md:border-r border-white/10 last:border-r-0">
-              <img src={icon1} alt="" className='w-[70px]' />
-              <div>
-                <p className="text-2xl md:text-3xl font-bold">Heat Shield</p>
-                <p className="text-[10px] text-[#e1e7d1] uppercase tracking-widest">Reduce cooling costs.</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <img src={icon2} alt="" className='w-[70px]' />
-              <div>
-                <p className="text-2xl md:text-3xl font-bold">Zero Chemical</p>
-                <p className="text-[10px] text-[#e1e7d1] uppercase tracking-widest">100% Organic care.</p>
-              </div>
-            </div>
-          </div>
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="bg-[#2E7D32] rounded-3xl h-auto p-6 md:p-10 grid md:grid-cols-3 gap-8 text-white shadow-[0_20px_50px_rgba(46,125,50,0.3)] border border-white/10" data-aos="fade-up">
+      
+      {/* Offer 1: Seasonal Discount */}
+      <div className="relative group flex items-center gap-5 md:border-r border-white/20 pr-4 last:border-r-0">
+        <div className="flex-shrink-0 bg-white/10 p-3 rounded-2xl group-hover:bg-white/20 transition-colors">
+          <img src={icon} alt="Lifestyle" className='w-12 h-12 object-contain' />
         </div>
-      </section>
+        <div>
+          <div className="flex items-center gap-2 mb-1">
+             <span className="bg-[#C5E1A5] text-[#132A13] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">Save 20%</span>
+          </div>
+          <p className="text-xl font-bold leading-tight">Green Lifestyle</p>
+          <p className="text-[11px] text-[#e1e7d1] mt-1 leading-relaxed">Setup your terrace garden at special seasonal rates.</p>
+        </div>
+      </div>
+
+      {/* Offer 2: Free Consultation */}
+      <div className="relative group flex items-center gap-5 md:border-r border-white/20 pr-4 last:border-r-0">
+        <div className="flex-shrink-0 bg-white/10 p-3 rounded-2xl group-hover:bg-white/20 transition-colors">
+          <img src={icon1} alt="Air Quality" className='w-12 h-12 object-contain' />
+        </div>
+        <div>
+          <div className="flex items-center gap-2 mb-1">
+             <span className="bg-orange-400 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">Limited Time</span>
+          </div>
+          <p className="text-xl font-bold leading-tight">Free Site Visit</p>
+          <p className="text-[11px] text-[#e1e7d1] mt-1 leading-relaxed">Book a free expert consultation for your urban home.</p>
+        </div>
+      </div>
+
+      {/* Offer 3: Starter Kit */}
+      <div className="relative group flex items-center gap-5">
+        <div className="flex-shrink-0 bg-white/10 p-3 rounded-2xl group-hover:bg-white/20 transition-colors">
+          <img src={icon2} alt="Harvest" className='w-12 h-12 object-contain' />
+        </div>
+        <div>
+          <div className="flex items-center gap-2 mb-1">
+             <span className="bg-white text-[#2E7D32] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase">New Bundle</span>
+          </div>
+          <p className="text-xl font-bold leading-tight">Harvest Kits</p>
+          <p className="text-[11px] text-[#e1e7d1] mt-1 leading-relaxed">Get 3 organic fertilizers free with your first seed box.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* About Section */}
       <section id="about" className="pb-13 md:pb-22 px-6 pt-12 max-w-7xl mx-auto overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-16 md:gap-24 pt-3 items-center">
           <div className="relative w-full aspect-[4/5] md:h-[650px]">
             <div className="w-full h-full rounded-[2rem] overflow-hidden  relative z-0 border-8 border-gray-100" data-aos="fade-right">
-              <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover" alt="Garden detail" />
+              <img src={aboutImg} className="w-full h-full object-cover" alt="Garden detail" />
             </div>
             <div className="absolute -bottom-10 -right-4 md:-right-12 w-1/2 h-2/3 z-20" data-aos="zoom-in" data-aos-delay="200">
-              <img src="https://images.unsplash.com/photo-1592394533824-9440e5d68530?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover rounded-[2rem] border-[8px] md:border-[12px] border-green " alt="Harvest" />
+              <img src={aboutImg1} className="w-full h-full object-cover rounded-[2rem] border-[8px] md:border-[12px] border-green " alt="Harvest" />
             </div>
             <div className="absolute top-12 left-1/2 bg-green-700 text-white p-4 rounded-full w-28 h-28 flex flex-col items-center justify-center shadow-2xl z-30 border-4 border-white floating-card">
               <span className="text-2xl font-bold">10+</span>
@@ -135,21 +199,38 @@ const Home = () => {
             </div>
           </div>
           <div data-aos="fade-left">
-            <span className="pill-tag bg-[#f2f4f0] text-[#2E7D32] mb-6">Our Journey</span>
+            <span className="pill-tag bg-[#f2f4f0] text-[#2E7D32] mb-6">About Us</span>
             <h2 className="text-4xl md:text-5xl font-bold text-[#132A13] mb-8 leading-tight font-heading">Healthy Living with Fresh Rooftop Produce</h2>
-            <p className="text-slate-500 text-lg mb-10 leading-relaxed font-light">Transform your terrace into a high-yielding organic farm. We've spent over a decade perfecting methods.</p>
+            <p className="text-slate-500 text-lg mb-10 leading-relaxed font-light">
+              At House of Green, we specialize in transforming urban terraces into vibrant, sustainable gardens. With years of expertise, we design and build eco-friendly spaces that grow fresh, organic produce right at your home. Our mission is to make healthy living accessible by bringing nature closer to everyday city life.
+            </p>
             <ul className="grid gap-6 mb-12">
               <li className="flex items-center gap-4 group">
                 <div className="bg-slate-50 w-10 h-10 rounded-full flex items-center justify-center text-[#2E7D32] group-hover:bg-[#2E7D32] group-hover:text-white transition">
-                  <i className="fas fa-check"></i>
+                  <i className="fas fa-spa"></i>
                 </div>
-                <span className="font-bold text-slate-700">Pure 100% Organic Setup</span>
+                <span className="font-bold text-slate-700">End-to-End Terrace Garden Solutions</span>
               </li>
+
               <li className="flex items-center gap-4 group">
                 <div className="bg-slate-50 w-10 h-10 rounded-full flex items-center justify-center text-[#2E7D32] group-hover:bg-[#2E7D32] group-hover:text-white transition">
-                  <i className="fas fa-check"></i>
+                  <i className="fas fa-spa"></i>
                 </div>
-                <span className="font-bold text-slate-700">Custom Automated Irrigation</span>
+                <span className="font-bold text-slate-700">Eco-Friendly & Sustainable Gardening Practices</span>
+              </li>
+
+              <li className="flex items-center gap-4 group">
+                <div className="bg-slate-50 w-10 h-10 rounded-full flex items-center justify-center text-[#2E7D32] group-hover:bg-[#2E7D32] group-hover:text-white transition">
+                  <i className="fas fa-spa"></i>
+                </div>
+                <span className="font-bold text-slate-700">Expert Design & Personalized Garden Planning</span>
+              </li>
+
+              <li className="flex items-center gap-4 group">
+                <div className="bg-slate-50 w-10 h-10 rounded-full flex items-center justify-center text-[#2E7D32] group-hover:bg-[#2E7D32] group-hover:text-white transition">
+                  <i className="fas fa-spa"></i>
+                </div>
+                <span className="font-bold text-slate-700">Ongoing Support & Maintenance Guidance</span>
               </li>
             </ul>
             <button className="bg-[#132A13] text-white px-10 py-4 rounded-xl font-bold bg-[#2E7D32] hover:bg-[#2E7D32] transition shadow-xl flex items-center gap-3">
@@ -163,51 +244,70 @@ const Home = () => {
       <section id="services-grid" className="pt-1 pb-[60px] px-6 overflow-hidden relative bg-[#fbfef2]">
         <div className="max-w-7xl mx-auto">
           <div className="relative flex flex-col md:flex-row justify-between items-end pb-32 pt-8">
-            <div className="absolute -top-10 -left-10 md:-left-20 z-0 w-[800px] md:w-[1000px]  opacity-10 pointer-events-none" data-aos="zoom-in">
-                <img src={serviceImage} alt="Decorative" className="w-full h-full object-cover opacity-20 " />
+            <div className="absolute -top-10 -left-10 md:-left-20 z-0 w-[800px] md:w-[1000px] opacity-10 pointer-events-none" data-aos="zoom-in">
+              <img src={homeService} alt="Decorative" className="w-full h-full object-cover opacity-20" />
             </div>
             <div className="absolute top-0 -left-10 w-full md:w-3/5 h-full bg-[#132A13] -z-10 rounded-br-[4rem]"></div>
-            <div className="w-full md:w-1/2 text-black p-6 md:p-10 md:pl-24" data-aos="fade-right">
-              <span className="text-xs tracking-[0.3em] opacity-70 uppercase font-bold block mb-2">Service Excellence</span>
-              <h2 className="text-4xl md:text-6xl font-bold mt-2 leading-tight font-heading">Providing Premium  Agro Services</h2>
+
+            <div className="w-full md:w-1/2 text-black p-6 md:p-6 md:pl-6" data-aos="fade-right">
+        <span className="text-xs tracking-[0.3em] opacity-70 uppercase font-bold block mb-2">
+          Our Services
+        </span>
+              <h2 className="text-4xl md:text-6xl font-bold mt-2 leading-tight font-heading">
+                Transforming Terraces into Green Spaces
+              </h2>
             </div>
+
             <div className="w-full md:w-1/3 p-6 md:pb-12 diss" data-aos="fade-left">
-              <p className="text-black text-xl font-bold leading-relaxed mb-6">We streamline the journey from seed to harvest.</p>
+              <p className="text-black text-xl font-bold leading-relaxed mb-6">
+                We design, build, and maintain sustainable terrace gardens for modern urban living.
+              </p>
               <a href="#" className="text-[#2E7D32] font-bold text-sm flex items-center gap-2">
-                <span className="bg-[#132A13] text-white py-3 px-5 rounded-2xl bg-[#2E7D32] hover:bg-[#2E7D32] transition">View All Services <span className="text-lg">↗</span></span>
+          <span className="bg-[#132A13] text-white py-3 px-5 rounded-2xl bg-[#2E7D32] hover:bg-[#2E7D32] transition">
+            View All Services <span className="text-lg">↗</span>
+          </span>
               </a>
             </div>
           </div>
 
-          <div className="relative -mt-[100px] z-30 pb-7"> 
+          <div className="relative -mt-[100px] z-30 pb-7">
             <Swiper
-              modules={[Autoplay, Pagination]}
-              spaceBetween={30}
-              slidesPerView={1}
-              breakpoints={{
-                640: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
-              }}
-              loop={true}
-              autoplay={{ delay: 4000 }}
-              pagination={{ clickable: true, dynamicBullets: false }}
-              className="mySwiper !overflow-visible" 
+                modules={[Autoplay, Pagination]}
+                spaceBetween={30}
+                slidesPerView={1}
+                breakpoints={{
+                  640: { slidesPerView: 1 },
+                  768: { slidesPerView: 2 },
+                  1024: { slidesPerView: 3 },
+                }}
+                loop={true}
+                autoplay={{ delay: 4000 }}
+                pagination={{ clickable: true, dynamicBullets: false }}
+                className="mySwiper !overflow-visible"
             >
-              {[1, 2, 3, 4, 5].map((item) => (
-                <SwiperSlide key={item} className="h-auto">
-                  <div className="bg-white p-6 rounded-3xl border border-[#e4e4e4] hover:-translate-y-2 transition-all duration-300 h-full border border-gray-50 flex flex-col group">
-                    <div className="relative w-full flex-grow flex items-center justify-center mb-6">
-                      <span className="absolute top-0 right-4 text-[120px] font-black text-[#132A13] opacity-5">V</span>
-                      <img src={veg} className="w-full h-auto max-h-[250px] object-contain relative z-10" alt="Fresh Vegetable" />
+              {services.map((service, index) => (
+                  <SwiperSlide key={index} className="h-auto">
+                    <div className="bg-white p-6 rounded-3xl border border-[#e4e4e4] hover:-translate-y-2 transition-all duration-300 h-full flex flex-col group">
+                      <div className="relative w-full flex-grow flex items-center justify-center mb-6">
+                <span className="absolute top-0 right-4 text-[120px] font-black text-[#132A13] opacity-5">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                        <img src={service.img} className="w-full h-auto max-h-[250px] object-contain relative z-10" alt={service.title} />
+                      </div>
+
+                      <div className="mt-auto">
+                        <h3 className="text-xl font-bold text-[#132A13] mb-2 font-heading">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                          {service.desc}
+                        </p>
+                        <a href="#" className="inline-block w-full text-center px-6 py-3 border border-slate-100 rounded-xl text-sm font-bold text-[#132A13] hover:text-[#fff] hover:bg-[#2E7D32] transition-colors">
+                          Explore More ↗
+                        </a>
+                      </div>
                     </div>
-                    <div className="mt-auto">
-                      <h3 className="text-xl font-bold text-[#132A13] mb-2 font-heading">Fresh Vegetable</h3>
-                      <p className="text-gray-500 text-sm leading-relaxed mb-6">Customized crop selection based on sunlight and seasonal cycles in Chennai.</p>
-                      <a href="#" className="inline-block w-full text-center px-6 py-3 border border-slate-100 rounded-xl text-sm font-bold text-[#132A13] hover:text-[#fff] hover:bg-[#2E7D32] transition-colors">Explore More ↗</a>
-                    </div>
-                  </div>
-                </SwiperSlide>
+                  </SwiperSlide>
               ))}
             </Swiper>
           </div>
@@ -217,25 +317,32 @@ const Home = () => {
       {/* Seasonal Picks */}
       <section id="crops" className="pb-16 md:pb-16 pt-14">
         <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-8 md:mb-20" data-aos="fade-up">
-                <span className="pill-tag bg-white text-[#2E7D32] mb-4 shadow-sm border border-slate-100">Seasonal Picks</span>
-                <h2 className="text-3xl md:text-5xl font-bold text-[#132A13] font-heading">Best For Your Terrace</h2>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-                {[
-                  { name: 'Cherry Tomatoes', img: 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&q=80&w=500' },
-                  { name: 'Garden Chillies', img: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800' },
-                  { name: 'Spinach & Greens', img: 'https://images.unsplash.com/photo-1557844352-761f2565b576?auto=format&fit=crop&q=80&w=500' },
-                  { name: 'Organic Brinjals', img: 'https://images.unsplash.com/photo-1592394533824-9440e5d68530?auto=format&fit=crop&q=80&w=500' }
-                ].map((crop, i) => (
-                  <div key={i} className="group" data-aos="fade-up" data-aos-delay={i * 100}>
-                      <div className="rounded-3xl overflow-hidden mb-4 aspect-square shadow-md border-4 border-white">
-                          <img src={crop.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={crop.name}/>
-                      </div>
-                      <h4 className="font-bold text-[#132A13] text-center text-lg">{crop.name}</h4>
+          <div className="text-center mb-8 md:mb-20" data-aos="fade-up">
+      <span className="pill-tag bg-white text-[#2E7D32] mb-4 shadow-sm border border-slate-100">
+        Grow at Home
+      </span>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#132A13] font-heading">
+              Fresh Picks for Your Terrace Garden
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+            {[
+              { name: 'Juicy Cherry Tomatoes', img: 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&q=80&w=500' },
+              { name: 'Spicy Green Chillies', img: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800' },
+              { name: 'Fresh Leafy Greens', img: 'https://images.unsplash.com/photo-1557844352-761f2565b576?auto=format&fit=crop&q=80&w=500' },
+              { name: 'Healthy Brinjals', img: 'https://images.unsplash.com/photo-1592394533824-9440e5d68530?auto=format&fit=crop&q=80&w=500' }
+            ].map((crop, i) => (
+                <div key={i} className="group" data-aos="fade-up" data-aos-delay={i * 100}>
+                  <div className="rounded-3xl overflow-hidden mb-4 aspect-square shadow-md border-4 border-white">
+                    <img src={crop.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={crop.name}/>
                   </div>
-                ))}
-            </div>
+                  <h4 className="font-bold text-[#132A13] text-center text-lg">
+                    {crop.name}
+                  </h4>
+                </div>
+            ))}
+          </div>
         </div>
       </section>
 
