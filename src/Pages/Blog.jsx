@@ -11,7 +11,7 @@ const Blog = () => {
     AOS.init({ duration: 1000, once: true });
     window.scrollTo(0,0);
 
-    document.title = "Blog | House of Green";
+    document.title = "Blog | House of Greens";
   }, []);
 
   const blogs = [

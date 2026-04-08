@@ -29,7 +29,7 @@ const ProductsPage = () => {
 
   const handleWhatsAppOrder = (product) => {
     const phoneNumber = "919677272271";
-    const message = `Hi House of Green! I'm interested in: \n*Product:* ${product.name}\n*Price:* ₹${product.sellingPrice}`;
+    const message = `Hi House of Greens! I'm interested in: \n*Product:* ${product.name}\n*Price:* ₹${product.sellingPrice}`;
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
   

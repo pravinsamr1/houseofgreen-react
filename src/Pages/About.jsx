@@ -7,7 +7,7 @@ const About = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
 
-    document.title = "About House Of Green";
+    document.title = "About House of Greens";
     window.scrollTo(0,0);
   }, []);
 
@@ -34,7 +34,7 @@ const About = () => {
           <img 
             src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800" 
             className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700" 
-            alt="About House of Green" 
+            alt="About House of Greens" 
           />
         </div>
 
@@ -62,30 +62,14 @@ const About = () => {
 
         <div className="space-y-6">
           <p className="text-lg text-slate-700 leading-relaxed">
-            House of Green started with a simple observation: Chennai's rooftops were 
-            unused potential. We decided to change that by merging traditional 
-            farming wisdom with modern automation.
+            At <b>House of Greenss</b>, we are dedicated to revolutionizing urban living by transforming underutilized terrace spaces into vibrant, self-sustaining ecosystems. With years of specialized expertise in horticultural design and smart irrigation, we build eco-friendly gardens that empower city dwellers to grow fresh, pesticide-free produce right at home.
           </p>
           
           <p className="text-slate-600 leading-relaxed">
-            Today, we help hundreds of families reclaim their food security. We 
-            don't just set up gardens; we build self-sustaining ecosystems that 
-            require minimal effort but provide maximum yield.
-          </p>
-        </div>
+            
 
-        <div className="grid sm:grid-cols-2 gap-4 py-4">
-          {[
-            { icon: 'fa-check-circle', text: 'Expert Site Analysis' },
-            { icon: 'fa-check-circle', text: 'Zero Maintenance Tech' },
-            { icon: 'fa-check-circle', text: 'Organic Seedlings' },
-            { icon: 'fa-check-circle', text: 'Lifetime Support' }
-          ].map((item, i) => (
-            <div key={i} className="flex items-center gap-3 text-[#132A13] font-semibold">
-              <i className={`fas ${item.icon} text-[#4F772D]`}></i>
-              <span>{item.text}</span>
-            </div>
-          ))}
+Our mission is to bridge the gap between concrete jungles and the natural world, making a healthy, organic lifestyle accessible to everyone. By merging traditional farming wisdom with modern technology, we bring nature closer to everyday life, helping you reclaim your food security one harvest at a time.
+          </p>
         </div>
       </div>
 

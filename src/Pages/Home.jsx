@@ -66,7 +66,7 @@ const Home = () => {
       offset: 100,
     });
 
-    document.title = "House Of Green - Revolutionizing Urban Farming in Chennai";
+    document.title = "House of Greens - Revolutionizing Urban Farming in Chennai";
 
     window.scrollTo(0,0);
   }, []);
@@ -155,7 +155,7 @@ const Home = () => {
             <span className="pill-tag bg-[#f2f4f0] text-[#2E7D32] mb-6">About Us</span>
             <h2 className="text-4xl md:text-5xl font-bold text-[#132A13] mb-8 leading-tight font-heading">Healthy Living with Fresh Rooftop Produce</h2>
             <p className="text-slate-500 text-lg mb-10 leading-relaxed font-light">
-              At House of Green, we specialize in transforming urban terraces into vibrant, sustainable gardens. With years of expertise, we design and build eco-friendly spaces that grow fresh, organic produce right at your home. Our mission is to make healthy living accessible by bringing nature closer to everyday city life.
+              At House of Greens, we specialize in transforming urban terraces into vibrant, sustainable gardens. With years of expertise, we design and build eco-friendly spaces that grow fresh, organic produce right at your home. Our mission is to make healthy living accessible by bringing nature closer to everyday city life.
             </p>
             <ul className="grid gap-6 mb-12">
               <li className="flex items-center gap-4 group">
@@ -406,7 +406,7 @@ const Home = () => {
                   <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
                 </div>
                 <p className="text-[#132A13] text-lg md:text-xl leading-relaxed italic mb-10 font-medium font-heading">
-                  "House of Green transformed my boring 400sqft terrace into a lush vegetable haven. I used to think urban farming was impossible, but their expert team guided me through every step. Now, my family enjoys pesticide-free tomatoes and spinach every single day right from our rooftop. It is truly life-changing and sustainable!"
+                  "House of Greens transformed my boring 400sqft terrace into a lush vegetable haven. I used to think urban farming was impossible, but their expert team guided me through every step. Now, my family enjoys pesticide-free tomatoes and spinach every single day right from our rooftop. It is truly life-changing and sustainable!"
                 </p>
                 <div className="flex items-center gap-5 mt-auto">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" className="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" alt="Client" />

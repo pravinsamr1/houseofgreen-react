@@ -12,7 +12,7 @@ const Contact = () => {
 
         window.scrollTo(0,0);
 
-        document.title = "Contact Us | House of Green";
+        document.title = "Contact Us | House of Greens";
     }, []);
 
     const handleSubmit = (e) => {
@@ -75,7 +75,7 @@ const Contact = () => {
                                     <ContactInfoItem 
                                         icon="fa-envelope" 
                                         label="Email Us" 
-                                        value="hello@houseofgreen.in" 
+                                        value="hello@houseofgreens.in" 
                                         sub="Response within 24 hours" 
                                     />
                                     <ContactInfoItem 

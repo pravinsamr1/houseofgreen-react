@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="md:col-span-5"> {/* Removed space-y-8 */}
     <div className="flex items-center">
         {/* Adjusted width to 200px for better balance with the text below */}
-        <img src={logo} alt="houseofgreen logo" className='w-[250px] block' />
+        <img src={logo} alt="houseofgreens logo" className='w-[250px] block' />
     </div>
     
     {/* Use a small, positive margin-top instead of a negative one */}
@@ -83,7 +83,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-4">
                     <i className="fas fa-envelope text-accent"></i>
-                    <a href="mailto:grow@houseofgreen.in" className="text-base text-white/80 hover:text-accent transition-colors truncate">grow@houseofgreen.in</a>
+                    <a href="mailto:grow@houseofgreens.in" className="text-base text-white/80 hover:text-accent transition-colors truncate">grow@houseofgreens.in</a>
                 </div>
             </div>
         </div>
@@ -91,7 +91,7 @@ const Footer = () => {
 
     <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-[10px] text-white/40 font-bold tracking-[0.4em] uppercase">
-            © 2026 HOUSEOFGREEN | ORGANIC URBANISM
+            © 2026 houseofgreens | ORGANIC URBANISM
         </p>
         <div className="flex gap-8 text-[10px] text-white/40 font-bold tracking-widest uppercase">
             <span>Designed with <i className="fas fa-heart text-accent mx-1"></i> in Chennai</span>

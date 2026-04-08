@@ -9,7 +9,7 @@ const Crops = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
 
-    window.document.title = "Crop Directory | House of Green";
+    window.document.title = "Crop Directory | House of Greens";
 
     window.scrollTo(0,0);
   }, []);

@@ -90,7 +90,7 @@ const BlogDescription = () => {
                 <h4 className="font-bold text-[#132A13] mb-4">Quick Contact</h4>
                 <div className="space-y-4 text-sm">
                     <p className="flex items-center gap-3 text-slate-500"><i className="fas fa-phone text-[#4F772D]"></i> +91 98765 43210</p>
-                    <p className="flex items-center gap-3 text-slate-500"><i className="fas fa-envelope text-[#4F772D]"></i> grow@houseofgreen.in</p>
+                    <p className="flex items-center gap-3 text-slate-500"><i className="fas fa-envelope text-[#4F772D]"></i> grow@houseofgreens.in</p>
                 </div>
             </div>
           </aside>

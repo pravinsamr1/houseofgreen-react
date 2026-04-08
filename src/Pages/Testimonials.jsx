@@ -9,7 +9,7 @@ const Testimonials = () => {
 
     window.scrollTo(0,0);
 
-    document.title = "Testimonials | House of Green";
+    document.title = "Testimonials | House of Greens";
   }, []);
 
 

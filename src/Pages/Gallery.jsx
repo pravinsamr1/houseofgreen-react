@@ -19,7 +19,7 @@ const Gallery = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
 
-    document.title = "Gallery | House of Green";
+    document.title = "Gallery | House of Greens";
 
     window.scrollTo(0,0);
     
