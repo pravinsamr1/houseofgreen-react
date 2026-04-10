@@ -15,6 +15,7 @@ import 'swiper/css/navigation';
 import ScrollToTop from './Components/Scroll'
 import Testimonials from './Pages/Testimonials'
 import ProductsPage from './Pages/Productpage'
+import BlogDescription1 from './Pages/Blog-desc1'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path='/contact-us' element={<Contact/>}></Route>
           <Route path='/blogs' element={<Blog/>}></Route>
           <Route path='/blog/1' element={<BlogDescription/>}></Route>
+          <Route path='/blog/2' element={<BlogDescription1/>}></Route>
           <Route path='/crops' element={<Crops/>}></Route>
           <Route path='/testimonials' element={<Testimonials/>}></Route>
           <Route path='/shop' element={<ProductsPage/>}></Route>

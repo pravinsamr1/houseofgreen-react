@@ -17,7 +17,6 @@ const Blog = () => {
   const blogs = [
     {
       id: 1,
-      date: "March 24, 2026",
       category: "Organic Care",
       title: "5 Secrets to High-Yield Rooftop Composting",
       desc: "Transform your kitchen waste into 'black gold' with our signature terrace-friendly method...",
@@ -25,7 +24,6 @@ const Blog = () => {
     },
     {
       id: 2,
-      date: "March 18, 2026",
       category: "Crop Guide",
       title: "Growing Summer Tomatoes in Chennai Heat",
       desc: "Expert tips on shading and hydration to keep your tomatoes juicy during peak April summers...",
@@ -33,7 +31,6 @@ const Blog = () => {
     },
     {
       id: 3,
-      date: "March 10, 2026",
       category: "Tech & Tools",
       title: "Is Smart Drip Irrigation Worth the Investment?",
       desc: "We compare manual watering vs. automated systems to see which yields the best ROI...",
@@ -62,18 +59,11 @@ const Blog = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                     alt={blog.title} 
                 />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest text-[#4F772D] shadow-sm">
-                    {blog.category}
-                  </span>
-                </div>
               </div>
 
               {/* Content Section */}
               <div className="p-8">
-                <p className="text-[#bc6c25] font-bold text-xs mb-3 uppercase tracking-widest">
-                    {blog.date}
-                </p>
+                
                 <h3 className="text-xl md:text-2xl font-bold text-[#132A13] mb-4 group-hover:text-[#4F772D] transition-colors line-clamp-2 font-heading">
                   {blog.title}
                 </h3>

@@ -33,6 +33,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import OfferMarquee from '../Components/Marquee';
+import { useNavigate } from 'react-router-dom';
 
 
 const services = [
@@ -58,7 +59,21 @@ const services = [
   },
 ];
 
+const categories = [
+  { name: "Vegetable Plants", img: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=600", count: "24 Items" },
+  { name: "Fruit Plants", img: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600", count: "18 Items" },
+  { name: "Seeds", img: "https://images.unsplash.com/photo-1618375531912-77ac314bb3bc?w=600", count: "50+ Varieties" },
+  { name: "Flower Plants", img: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=600", count: "30 Items" },
+  { name: "Crotons Plants", img: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600", count: "12 Items" },
+  { name: "Gardening Pots", img: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600", count: "15 Designs" },
+  { name: "Equipments", img: "https://images.unsplash.com/photo-1589923188900-85dae523342b?w=600", count: "20+ Tools" },
+];
+
 const Home = () => {
+
+  const navigate = useNavigate()
+
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -186,7 +201,7 @@ const Home = () => {
                 <span className="font-bold text-slate-700">Ongoing Support & Maintenance Guidance</span>
               </li>
             </ul>
-            <button className="bg-[#132A13] text-white px-10 py-4 rounded-xl font-bold bg-[#2E7D32] hover:bg-[#2E7D32] transition shadow-xl flex items-center gap-3">
+            <button className="bg-[#132A13] text-white px-10 py-4 rounded-xl font-bold bg-[#2E7D32] hover:bg-[#2E7D32] transition shadow-xl flex items-center gap-3" onClick={()=>navigate('/about-us')}>
               Our Story <i className="fas fa-arrow-right-long text-sm"></i>
             </button>
           </div>
@@ -194,78 +209,81 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services-grid" className="pt-1 pb-[60px] px-6 overflow-hidden relative bg-[#fbfef2]">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative flex flex-col md:flex-row justify-between items-end pb-32 pt-8">
-            <div className="absolute -top-10 -left-10 md:-left-20 z-0 w-[800px] md:w-[1000px] opacity-10 pointer-events-none" data-aos="zoom-in">
-              <img src={homeService} alt="Decorative" className="w-full h-full object-cover opacity-20" />
-            </div>
-            <div className="absolute top-0 -left-10 w-full md:w-3/5 h-full bg-[#132A13] -z-10 rounded-br-[4rem]"></div>
+      <section id="category-grid" className="pt-1 pb-[60px] px-6 overflow-hidden relative bg-[#fbfef2]">
+  <div className="max-w-7xl mx-auto">
+    <div className="relative flex flex-col md:flex-row justify-between items-end pb-32 pt-8">
+      <div className="absolute top-0 -left-10 w-full md:w-3/5 h-full bg-[#132A13] -z-10 rounded-br-[4rem]"></div>
 
-            <div className="w-full md:w-1/2 text-black p-6 md:p-6 md:pl-6" data-aos="fade-right">
-        <span className="text-xs tracking-[0.3em] opacity-70 uppercase font-bold block mb-2">
-          Our Services
+      <div className="w-full md:w-1/2 text-white p-6 md:pl-6" data-aos="fade-right">
+        <span className="text-xs tracking-[0.3em] opacity-70 uppercase font-bold block mb-2 text-black">
+          Browse by
         </span>
-              <h2 className="text-4xl md:text-6xl font-bold mt-2 leading-tight font-heading">
-                Transforming Terraces into Green Spaces
-              </h2>
-            </div>
+        <h2 className="text-4xl md:text-6xl font-bold mt-2 leading-tight text-black font-heading">
+          Plant Categories
+        </h2>
+      </div>
 
-            <div className="w-full md:w-1/3 p-6 md:pb-12 diss" data-aos="fade-left">
-              <p className="text-black text-xl font-bold leading-relaxed mb-6">
-                We design, build, and maintain sustainable terrace gardens for modern urban living.
-              </p>
-              <a href="#" className="text-[#2E7D32] font-bold text-sm flex items-center gap-2">
-          <span className="bg-[#132A13] text-white py-3 px-5 rounded-2xl bg-[#2E7D32] hover:bg-[#2E7D32] transition">
-            View All Services <span className="text-lg">↗</span>
-          </span>
-              </a>
-            </div>
-          </div>
+      <div className="w-full md:w-1/3 p-6 md:pb-12" data-aos="fade-left">
+        <p className="text-gray-700 text-lg leading-relaxed mb-6">
+          Find exactly what you need for your terrace garden. From organic seeds to premium tools.
+        </p>
+      </div>
+    </div>
 
-          <div className="relative -mt-[100px] z-30 pb-7">
-            <Swiper
-                modules={[Autoplay, Pagination]}
-                spaceBetween={30}
-                slidesPerView={1}
-                breakpoints={{
-                  640: { slidesPerView: 1 },
-                  768: { slidesPerView: 2 },
-                  1024: { slidesPerView: 3 },
-                }}
-                loop={true}
-                autoplay={{ delay: 4000 }}
-                pagination={{ clickable: true, dynamicBullets: false }}
-                className="mySwiper !overflow-visible"
+    {/* Category Cards Container */}
+    <div className="relative -mt-[100px] z-30 pb-12">
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        spaceBetween={25}
+        slidesPerView={1}
+        breakpoints={{
+          480: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+          1280: { slidesPerView: 4 }, // 5 categories visible on desktop
+        }}
+        loop={true}
+        autoplay={{ delay: 3500 }}
+        pagination={{ clickable: true }}
+        className="mySwiper !overflow-visible"
+      >
+        {categories.map((cat, index) => (
+          <SwiperSlide key={index} className="h-auto">
+            <div 
+              onClick={() => navigate('/shop')} // Link to your shop page
+              className="cursor-pointer group bg-white rounded-[1.5rem] p-4 border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col items-center text-center"
             >
-              {services.map((service, index) => (
-                  <SwiperSlide key={index} className="h-auto">
-                    <div className="bg-white p-6 rounded-3xl border border-[#e4e4e4] hover:-translate-y-2 transition-all duration-300 h-full flex flex-col group">
-                      <div className="relative w-full flex-grow flex items-center justify-center mb-6">
-                <span className="absolute top-0 right-4 text-[120px] font-black text-[#132A13] opacity-5">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                        <img src={service.img} className="w-full h-auto max-h-[250px] object-contain relative z-10" alt={service.title} />
-                      </div>
+              {/* Category Image - Circular/Organic Shape */}
+              <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden mb-5 shadow-inner">
+                <img 
+                  src={cat.img} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-115" 
+                  alt={cat.name} 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
 
-                      <div className="mt-auto">
-                        <h3 className="text-xl font-bold text-[#132A13] mb-2 font-heading">
-                          {service.title}
-                        </h3>
-                        <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                          {service.desc}
-                        </p>
-                        <a href="#" className="inline-block w-full text-center px-6 py-3 border border-slate-100 rounded-xl text-sm font-bold text-[#132A13] hover:text-[#fff] hover:bg-[#2E7D32] transition-colors">
-                          Explore More ↗
-                        </a>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
-      </section>
+              {/* Text Info */}
+              <div className="pb-2">
+                <h3 className="text-lg md:text-xl font-medium text-[#132A13] group-hover:text-[#2E7D32] transition-colors mb-1">
+                  {cat.name}
+                </h3>
+                <p className="text-[#2E7D32] text-xs font-bold bg-green-50 px-3 py-1 rounded-full inline-block">
+                  {cat.count}
+                </p>
+              </div>
+
+              {/* Small "Explore" Indicator */}
+              <div className="mt-4 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-[#132A13] group-hover:bg-[#2E7D32] group-hover:text-white transition-all">
+                <i className="fas fa-arrow-right text-sm"></i>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  </div>
+</section>
 
       
 

@@ -69,4 +69,14 @@
   .diss{
     display: none;
   }
+  .remove-mar{
+    margin-top: -5px !important;
+    
 }
+
+.remove-marr{
+    margin-top: 10px !important;
+    text-align: justify;
+}
+}
+

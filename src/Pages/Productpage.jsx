@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import banner from '../assets/img/banner1.jpg'
 
 const ProductsPage = () => {
 
@@ -10,7 +11,7 @@ const ProductsPage = () => {
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
 
   const products = [
-    { id: 1, name: "Organic Tomato Starter Kit", image: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&q=80&w=500", originalPrice: 1200, sellingPrice: 899, category: "Seeds & Kits" },
+    { id: 1, name: "Organic Tomato Starter Kit", image: banner, originalPrice: 1200, sellingPrice: 899, category: "Seeds & Kits" },
     { id: 2, name: "Premium Grow Bag - Large", image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=500", originalPrice: 450, sellingPrice: 299, category: "Gardening" },
     { id: 3, name: "Neem Oil Pest Control", image: "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&q=80&w=500", originalPrice: 350, sellingPrice: 250, category: "Tools" },
     { id: 4, name: "Organic Fertilizer", image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=500", originalPrice: 600, sellingPrice: 450, category: "Gardening" },
@@ -29,8 +30,24 @@ const ProductsPage = () => {
 
   const handleWhatsAppOrder = (product) => {
     const phoneNumber = "919677272271";
-    const message = `Hi House of Greens! I'm interested in: \n*Product:* ${product.name}\n*Price:* ₹${product.sellingPrice}`;
-    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    
+    // We place the image link at the very end to trigger the WhatsApp link preview
+    const message = `*INQUIRY: ${product.name.toUpperCase()}* 🌿
+    
+*Category:* ${product.category}
+*Selling Price:* ₹${product.sellingPrice}
+*Original Price:* ₹${product.originalPrice}
+*You Save:* ₹${product.originalPrice - product.sellingPrice}
+
+I would like to order this product from House of Green. Please confirm availability.
+
+*View Product Image:*
+${product.image}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Using the wa.me API
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
   
   
