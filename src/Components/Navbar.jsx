@@ -15,8 +15,7 @@ const Navbar = () => {
         { name: 'Our Plant List', path: '/crops' },
         { name: 'Shop', path: '/shop' }, // Simple link
         { name: 'Gallery', path: '/gallery' },
-        { name: 'Blogs', path: '/blogs' },
-        { name: 'Testimonials', path: '/testimonials' },
+        { name: 'Contact Us', path: '/contact-us' },
     ];
 
     useEffect(() => {
@@ -52,11 +51,12 @@ const Navbar = () => {
 
                 {/* Desktop CTA */}
                 <button
-                    onClick={() => navigate('/contact-us')}
-                    className="hidden lg:block bg-[#2E7D32] text-white px-7 py-3 rounded-full font-bold hover:bg-[#1b4d1e] shadow-lg transition active:scale-95"
-                >
-                    Get in Touch
-                </button>
+    onClick={() => window.open('https://wa.me/+919677272271', '_blank')}
+    className="hidden lg:flex items-center gap-2 bg-[#2E7D32] text-white px-7 py-3 rounded-full font-bold hover:bg-[#1b4d1e] shadow-lg transition-all duration-300 active:scale-95"
+>
+    <i className="fa-brands fa-whatsapp text-xl"></i>
+    <span>For Enquiry</span>
+</button>
 
                 {/* Mobile Toggle */}
                 <button className="lg:hidden text-2xl z-[210]" onClick={() => setIsMenuOpen(!isMenuOpen)}>

@@ -31,7 +31,6 @@ const ProductsPage = () => {
   const handleWhatsAppOrder = (product) => {
     const phoneNumber = "919677272271";
     
-    // We place the image link at the very end to trigger the WhatsApp link preview
     const message = `*INQUIRY: ${product.name.toUpperCase()}* 🌿
     
 *Category:* ${product.category}
@@ -39,9 +38,8 @@ const ProductsPage = () => {
 *Original Price:* ₹${product.originalPrice}
 *You Save:* ₹${product.originalPrice - product.sellingPrice}
 
-I would like to order this product from House of Green. Please confirm availability.
+I would like to order this product from House of Greens. Please confirm availability.
 
-*View Product Image:*
 ${product.image}`;
 
     const encodedMessage = encodeURIComponent(message);
