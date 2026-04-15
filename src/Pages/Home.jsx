@@ -34,6 +34,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import OfferMarquee from '../Components/Marquee';
 import { useNavigate } from 'react-router-dom';
+import PlantPreview from '../Components/Plantpreview';
 
 
 const services = [

@@ -16,6 +16,7 @@ const ProductsPage = () => {
     { id: 3, name: "Neem Oil Pest Control", image: "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&q=80&w=500", originalPrice: 350, sellingPrice: 250, category: "Tools" },
     { id: 4, name: "Organic Fertilizer", image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=500", originalPrice: 600, sellingPrice: 450, category: "Gardening" },
     { id: 5, name: "Hand Trowel", image: "https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=500", originalPrice: 250, sellingPrice: 150, category: "Tools" },
+    { id: 5, name: "Hand Trowel", image: "https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=500", originalPrice: 250, sellingPrice: 150, category: "Flowers" },
   ];
 
   const categories = ['All', ...new Set(products.map(p => p.category))];
@@ -80,26 +81,6 @@ ${product.image}`;
           ))}
         </div>
       </div>
-
-      <div className="mb-6">
-        <div className="flex justify-between items-center mb-4">
-          <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Max Price</p>
-          <span className="text-[#2E7D32] font-bold">₹{maxPrice}</span>
-        </div>
-        <input 
-          type="range" min="100" max="2000" step="50"
-          value={maxPrice}
-          onChange={(e) => setMaxPrice(e.target.value)}
-          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#2E7D32]"
-        />
-      </div>
-
-      <button 
-        onClick={() => { setSelectedCategory('All'); setMaxPrice(2000); setIsFilterDrawerOpen(false); }}
-        className="w-full py-2 text-sm text-gray-400 hover:text-red-500 transition-colors"
-      >
-        Reset Filters
-      </button>
     </>
   );
 
@@ -175,7 +156,7 @@ ${product.image}`;
 
                         <button 
                           onClick={() => handleWhatsAppOrder(product)}
-                          className="mt-auto w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-2 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-95 text-xs md:text-sm"
+                          className="mt-auto w-full bg-[#2E7D32] hover:bg-[#128C7E] text-white py-2 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-95 text-xs md:text-sm"
                         >
                           <i className="fab fa-whatsapp text-lg"></i>
                           <span>Order</span>

@@ -1,7 +1,11 @@
 import React from 'react'
 import logo from '../assets/img/footer-logo.png'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+
+    const navigate = useNavigate()
+
   return (
     <div>
         <footer className="relative pt-24 pb-5 px-6 lg:px-12 pt-[50px] text-white overflow-hidden">
@@ -45,10 +49,10 @@ const Footer = () => {
                 <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-accent"></span>
             </h4>
             <ul className="space-y-4">
-                <li><a href="#home" className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block">Home</a></li>
-                <li><a href="#about" className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block">Our Story</a></li>
-                <li><a href="#services-grid" className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block">Services</a></li>
-                <li><a href="#crops" className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block">Crop Guide</a></li>
+                <li><p onClick={()=>navigate('/about-us')} className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">About Us</p></li>
+                <li><p onClick={()=>navigate('/crops')}className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">Our Plant List</p></li>
+                <li><p onClick={()=>navigate('/shop')} className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">Shop</p></li>
+                <li><p onClick={()=>navigate('/gallery')} className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">Gallery</p></li>
             </ul>
         </div>
 
@@ -58,10 +62,8 @@ const Footer = () => {
                 <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-accent"></span>
             </h4>
             <ul className="space-y-4">
-                <li><a href="#" className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block">Privacy Policy</a></li>
-                <li><a href="#" className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block">Terms</a></li>
-                <li><a href="#" className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block">FAQ's</a></li>
-                <li><a href="#" className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block">Support</a></li>
+                <li><p onClick={()=>navigate('/privacy-policy')}   className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">Privacy Policy</p></li>
+                <li><p onClick={()=>navigate('/terms-conditions')}    className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">Terms</p></li>
             </ul>
         </div>
 
@@ -74,7 +76,7 @@ const Footer = () => {
                 <div className="flex items-start gap-4">
                     <i className="fas fa-map-marker-alt text-accent mt-1.5"></i>
                     <p className="text-base text-white/80 leading-relaxed">
-                        123 Green Terrace Lane, Adyar, Chennai - 600020
+                        Porur, Chennai - 600056
                     </p>
                 </div>
                 <div className="flex items-center gap-4">
@@ -83,7 +85,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-4">
                     <i className="fas fa-envelope text-accent"></i>
-                    <a href="mailto:grow@houseofgreens.in" className="text-base text-white/80 hover:text-accent transition-colors truncate">grow@houseofgreens.in</a>
+                    <a href="mailto:help@houseofgreens.co.in" className="text-base text-white/80 hover:text-accent transition-colors truncate">help@houseofgreens.co.in</a>
                 </div>
             </div>
         </div>
@@ -91,10 +93,10 @@ const Footer = () => {
 
     <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-[10px] text-white/40 font-bold tracking-[0.4em] uppercase">
-            © 2026 houseofgreens | ORGANIC URBANISM
+            © 2026 houseofgreens | All Rights Reserved
         </p>
         <div className="flex gap-8 text-[10px] text-white/40 font-bold tracking-widest uppercase">
-            <span>Designed with <i className="fas fa-heart text-accent mx-1"></i> in Chennai</span>
+            <span>Designed by <a href="https://impinfo.in" className='hover:text-[#fff]' target='_blank'>Imperial Info Systems</a> </span>
         </div>
     </div>
 </footer>

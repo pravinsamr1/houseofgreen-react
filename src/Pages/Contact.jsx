@@ -75,13 +75,13 @@ const Contact = () => {
                                     <ContactInfoItem 
                                         icon="fa-envelope" 
                                         label="Email Us" 
-                                        value="hello@houseofgreens.in" 
+                                        value="help@houseofgreens.co.in" 
                                         sub="Response within 24 hours" 
                                     />
                                     <ContactInfoItem 
                                         icon="fa-location-dot" 
                                         label="Visit Office" 
-                                        value={<>123, Green Terrace Plaza, <br />Anna Nagar, Chennai - 600040</>} 
+                                        value={<>Porur, Chennai - 600056</>} 
                                         sub="Tamil Nadu, India" 
                                     />
                                 </div>

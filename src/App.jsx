@@ -16,6 +16,8 @@ import ScrollToTop from './Components/Scroll'
 import Testimonials from './Pages/Testimonials'
 import ProductsPage from './Pages/Productpage'
 import BlogDescription1 from './Pages/Blog-desc1'
+import Terms from './Pages/Terms'
+import Privacy from './Pages/Privacy'
 
 const App = () => {
   return (
@@ -33,6 +35,8 @@ const App = () => {
           <Route path='/crops' element={<Crops/>}></Route>
           <Route path='/testimonials' element={<Testimonials/>}></Route>
           <Route path='/shop' element={<ProductsPage/>}></Route>
+          <Route path='/terms-conditions' element={<Terms/>}></Route>
+          <Route path='/privacy-policy' element={<Privacy/>}></Route>
         </Routes>
         <Footer/>
         <ScrollToTop/>

@@ -1,2 +1,8 @@
 @import "tailwindcss";
 
+html, body {
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
