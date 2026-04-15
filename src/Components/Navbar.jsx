@@ -77,11 +77,12 @@ const Navbar = () => {
                         ))}
                     </div>
                     <button
-                    onClick={() => navigate('/contact-us')}
-                    className=" lg:block bg-[#2E7D32] text-white px-7 py-3 mt-10 rounded-full font-bold hover:bg-[#1b4d1e] shadow-lg transition active:scale-95"
-                >
-                    Get in Touch
-                </button>
+    onClick={() => window.open('https://wa.me/+919677272271', '_blank')}
+    className="hidden lg:flex items-center gap-2 bg-[#2E7D32] text-white px-7 py-3 rounded-full font-bold hover:bg-[#1b4d1e] shadow-lg transition-all duration-300 active:scale-95"
+>
+    <i className="fa-brands fa-whatsapp text-xl"></i>
+    <span>For Enquiry</span>
+</button>
                 </div>
                 
             </div>
