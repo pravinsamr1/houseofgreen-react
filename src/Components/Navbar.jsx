@@ -12,7 +12,7 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'About Us', path: '/about-us' },
-        { name: 'Our Plant List', path: '/crops' },
+        { name: 'Our Plant List', path: '/plants' },
         { name: 'Shop', path: '/shop' }, // Simple link
         { name: 'Gallery', path: '/gallery' },
         { name: 'Contact Us', path: '/contact-us' },
@@ -27,7 +27,7 @@ const Navbar = () => {
     }, [isMenuOpen]);
 
     return (
-        <nav className="fixed w-full top-0 z-[100] border-b border-gray-100 bg-white/80 backdrop-blur-xl">
+        <nav className="fixed w-full top-0 z-[100] border-b border-gray-100 bg-white ">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-12 h-20 md:h-24 flex justify-between items-center">
                 
                 {/* Logo */}

@@ -2,8 +2,12 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import BreadcrumbHero from '../Components/Bread';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+
+  const navigate = useNavigate()
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
 
@@ -166,10 +170,9 @@ Our mission is to bridge the gap between concrete jungles and the natural world,
 
       <section className="py-24 px-6 text-center">
         <div className="max-w-4xl mx-auto" data-aos="zoom-in">
-          <h2 className="text-4xl md:text-6xl font-bold text-[#132A13] font-heading mb-8">Ready to start your green journey?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#132A13] font-heading mb-8">Ready to start your green journey?</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-[#132A13] text-white px-10 py-4 rounded-xl font-bold shadow-xl hover:bg-[#31572C] transition">Consultation</button>
-            <button className="bg-white text-[#132A13] border-2 border-[#132A13] px-10 py-4 rounded-xl font-bold hover:bg-[#f2f4f0] transition">Gallery</button>
+            <button onClick={()=>{navigate('/contact-us')}} className="bg-[#132A13] text-white px-10 py-4 rounded-xl font-bold shadow-xl hover:bg-[#31572C] transition">Get In Touch</button>
           </div>
         </div>
       </section>

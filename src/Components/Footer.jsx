@@ -50,7 +50,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4">
                 <li><p onClick={()=>navigate('/about-us')} className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">About Us</p></li>
-                <li><p onClick={()=>navigate('/crops')}className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">Our Plant List</p></li>
+                <li><p onClick={()=>navigate('/plants')}className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">Our Plant List</p></li>
                 <li><p onClick={()=>navigate('/shop')} className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">Shop</p></li>
                 <li><p onClick={()=>navigate('/gallery')} className="text-base text-white/80 hover:text-accent hover:translate-x-2 transition-all inline-block cursor-pointer">Gallery</p></li>
             </ul>

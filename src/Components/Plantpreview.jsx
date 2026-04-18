@@ -51,7 +51,7 @@ Could you provide more details regarding the plant?`;
 
     <div className="hidden md:block">
         <button 
-            onClick={() => navigate('/crops')}
+            onClick={() => navigate('/plants')}
             className="flex items-center gap-2 px-6 py-3 border-2 border-[#00aa40] text-[#00aa40] font-bold text-sm rounded-full transition-all duration-300 hover:bg-[#00aa40] hover:text-white active:scale-95 shadow-sm"
         >
             View Full Directory 

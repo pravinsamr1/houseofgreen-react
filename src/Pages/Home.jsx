@@ -63,11 +63,9 @@ const services = [
 const categories = [
   { name: "Vegetable Plants", img: "https://images.unsplash.com/photo-1592419044706-39796d40f98c?w=600", count: "24 Items" },
   { name: "Fruit Plants", img: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600", count: "18 Items" },
-  { name: "Seeds", img: "https://images.unsplash.com/photo-1618375531912-77ac314bb3bc?w=600", count: "50+ Varieties" },
   { name: "Flower Plants", img: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=600", count: "30 Items" },
   { name: "Crotons Plants", img: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600", count: "12 Items" },
   { name: "Gardening Pots", img: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600", count: "15 Designs" },
-  { name: "Equipments", img: "https://images.unsplash.com/photo-1589923188900-85dae523342b?w=600", count: "20+ Tools" },
 ];
 
 const Home = () => {
@@ -88,12 +86,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-[#fdfdfb] text-slate-800 font-sans overflow-x-hidden">
+    <div className="bg-[#fdfdfb] text-slate-800 font-sans ">
       {/* Custom Styles Injection */}
       
 
       {/* Hero Slider */}
-      <section id="home" className="relative pt-15 overflow-hidden">
+      <section id="home" className="relative pt-23 overflow-hidden">
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
           effect="fade"
@@ -210,7 +208,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section id="category-grid" className="pt-1 pb-[60px] px-6 overflow-hidden relative bg-[#fbfef2]">
+      <section id="category-grid" className="pt-1 pb-[60px] px-6 overflow-hidden relative bg-[#f2f7e2]">
   <div className="max-w-7xl mx-auto">
     <div className="relative flex flex-col md:flex-row justify-between items-end pb-32 pt-8">
       <div className="absolute top-0 -left-10 w-full md:w-3/5 h-full bg-[#132A13] -z-10 rounded-br-[4rem]"></div>
@@ -328,138 +326,7 @@ const Home = () => {
             </div>
         </div>
       </section>
-
-      {/* Blog Section */}
-      <section className="pt-8 md:pt-16 pb-8 md:pb-10  px-6 overflow-hidden bg-[#fbfef2]">
-  <div className="max-w-7xl mx-auto">
-    <div className="text-center mb-5 md:mb-16" data-aos="fade-up">
-      <span className="pill-tag bg-[#f2f4f0] text-[#2E7D32] mb-4 inline-block px-4 py-1 rounded-full text-sm font-bold">
-        Latest Updates
-      </span>
-      <h2 className="text-3xl md:text-5xl font-bold text-[#132A13] font-heading leading-tight">
-        From Our Green Journal
-      </h2>
-    </div>
-
-    <Swiper
-      modules={[Autoplay, Pagination, Navigation]}
-      spaceBetween={30}
-      slidesPerView={1}
-      loop={true}
-      autoplay={{ delay: 2000, disableOnInteraction: false }}
-      pagination={{ clickable: true }}
-      breakpoints={{
-        // Responsive breakpoints
-        640: { slidesPerView: 2, spaceBetween: 20 },
-        1024: { slidesPerView: 3, spaceBetween: 30 },
-      }}
-      className="blogSwiper !pb-16"
-    >
-      {[
-        { title: '5 Secrets to High-Yield Rooftop Composting', date: 'March 24, 2026', img: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=600' },
-        { title: 'Growing Summer Tomatoes in Chennai Heat', date: 'March 18, 2026', img: 'https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&q=80&w=600' },
-        { title: 'Is Smart Drip Irrigation Worth the Investment?', date: 'March 10, 2026', img: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=600' },
-        { title: 'Is Smart Drip Irrigation Worth the Investment?', date: 'March 10, 2026', img: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=600' },
-      ].map((post, i) => (
-        <SwiperSlide key={i}>
-          <div className="group bg-white p-4 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all border border-slate-50 h-full">
-            <div className="relative rounded-[2rem] overflow-hidden mb-6 aspect-[7/5] shadow-md">
-              <img 
-                src={post.img} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-                alt={post.title}
-              />
-            </div>
-            <div className="px-2 pb-4">
-              <p className="text-[#bc6c25] font-bold text-xs mb-3 uppercase tracking-widest">{post.date}</p>
-              <h3 className="text-xl font-bold text-[#132A13] mb-4 group-hover:text-[#2E7D32] transition-colors cursor-pointer line-clamp-2">
-                {post.title}
-              </h3>
-              <a href="#" className="text-[#132A13] font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all">
-                Read Article <i className="fas fa-arrow-right text-[#2E7D32]"></i>
-              </a>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-</section>
-
-      {/* Testimonials */}
-      <section id="testimonials" className="relative pt-10 pb-1 md:py-16 bg-white overflow-hidden">
-  <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-    <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
-      
-      {/* Left Column */}
-      <div className="lg:col-span-5 flex flex-col h-full" data-aos="fade-right">
-        <span className="text-[#bc6c25] font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">Success Stories</span>
-        <h2 className="text-3xl md:text-5xl font-bold text-[#132A13] font-heading leading-tight mb-8">
-          Real Harvests <br /> from Real People
-        </h2>
-        
-        <div className="relative flex-1 min-h-[400px] rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white hidden lg:block">
-          <img 
-            src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=800" 
-            className="absolute inset-0 w-full h-full object-cover" 
-            alt="Garden Harvest" 
-          />
-        </div>
-      </div>
-
-      {/* Right Column - ADDED 'min-w-0' HERE */}
-      <div className="lg:col-span-7 flex flex-col h-full lg:pt-16 min-w-0" data-aos="fade-left">
-        <div className="h-full relative">
-          <Swiper
-            modules={[Autoplay, Pagination]}
-            slidesPerView={1}
-            spaceBetween={40}
-            loop={true}
-            autoplay={{ delay: 5000 }}
-            pagination={{ clickable: true }}
-            className="testSwiper flex-1 !pb-16 h-full w-full" /* Added w-full */
-          >
-            <SwiperSlide className="h-auto"> {/* Changed h-full to h-auto for better internal flex */}
-              <div className="bg-slate-50 p-8 md:p-14 rounded-[2rem] border border-slate-100 h-full flex flex-col justify-center">
-                <div className="flex gap-1 text-[#2E7D32] mb-8">
-                  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
-                </div>
-                <p className="text-[#132A13] text-lg md:text-xl leading-relaxed italic mb-10 font-medium font-heading">
-                  "House of Greens transformed my boring 400sqft terrace into a lush vegetable haven. I used to think urban farming was impossible, but their expert team guided me through every step. Now, my family enjoys pesticide-free tomatoes and spinach every single day right from our rooftop. It is truly life-changing and sustainable!"
-                </p>
-                <div className="flex items-center gap-5 mt-auto">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" className="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" alt="Client" />
-                  <div>
-                    <h4 className="text-[#132A13] font-bold text-lg font-heading">Pravin Sam</h4>
-                    <p className="text-slate-400 text-xs uppercase tracking-widest font-bold">Chennai Homeowner</p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide className="h-auto">
-              <div className="bg-slate-50 p-8 md:p-14 rounded-[2rem] border border-slate-100 h-full flex flex-col justify-center">
-                <div className="flex gap-1 text-[#2E7D32] mb-8">
-                  <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
-                </div>
-                <p className="text-[#132A13] text-lg md:text-xl leading-relaxed italic mb-10 font-medium font-heading">
-                  "Working with this team was the best decision for our home. The automated irrigation system they installed makes maintenance a breeze, even with my busy schedule. We've successfully harvested organic herbs and gourds that taste infinitely better than store-bought ones. Our terrace has become the most beautiful, green, and peaceful part of our house."
-                </p>
-                <div className="flex items-center gap-5 mt-auto">
-                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" className="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" alt="Client" />
-                  <div>
-                    <h4 className="text-[#132A13] font-bold text-lg font-heading">Anitha Raj</h4>
-                    <p className="text-slate-400 text-xs uppercase tracking-widest font-bold">Urban Gardener</p>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      <PlantPreview/>
     </div>
   );
 };

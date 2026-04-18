@@ -48,7 +48,7 @@ Could you provide more details regarding the plant?`;
 
   return (
     <div className="bg-[#fdfdfb] pb-20 min-h-screen">
-      <BreadcrumbHero title="Crop Directory" />
+      <BreadcrumbHero title="Plant Directory" />
       <style>{`
         .font-heading { font-family: 'Philosopher', serif; }
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }

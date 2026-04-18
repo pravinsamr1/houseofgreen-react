@@ -80,7 +80,9 @@ const Gallery = () => {
         .gallery-overlay:hover::after { opacity: 1; }
       `}</style>
 
-      <BreadcrumbHero title={"Gallery"}/>
+      <BreadcrumbHero title={"Galleryy"}/>
+
+      
 
       {/* Gallery Grid */}
       <section className="py-15 px-6">
@@ -90,7 +92,7 @@ const Gallery = () => {
               <div 
                 key={index}
                 onClick={() => openLightbox(index)}
-                className="gallery-overlay relative group cursor-pointer overflow-hidden rounded-[2.5rem] shadow-xl aspect-square" 
+                className="gallery-overlay relative group cursor-pointer overflow-hidden rounded-[2.5rem]  aspect-square" 
                 data-aos="zoom-in" 
                 data-aos-delay={index * 100}
               >
@@ -140,6 +142,8 @@ const Gallery = () => {
           >
             <i className="fas fa-chevron-right"></i>
           </button>
+
+          
         </div>
       )}
     </div>

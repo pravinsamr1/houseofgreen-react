@@ -12,11 +12,11 @@ const ProductsPage = () => {
 
   const products = [
     { id: 1, name: "Organic Tomato Starter Kit", image: banner, originalPrice: 1200, sellingPrice: 899, category: "Seeds & Kits" },
-    { id: 2, name: "Premium Grow Bag - Large", image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=500", originalPrice: 450, sellingPrice: 299, category: "Gardening" },
-    { id: 3, name: "Neem Oil Pest Control", image: "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&q=80&w=500", originalPrice: 350, sellingPrice: 250, category: "Tools" },
-    { id: 4, name: "Organic Fertilizer", image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=500", originalPrice: 600, sellingPrice: 450, category: "Gardening" },
-    { id: 5, name: "Hand Trowel", image: "https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=500", originalPrice: 250, sellingPrice: 150, category: "Tools" },
-    { id: 5, name: "Hand Trowel", image: "https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=500", originalPrice: 250, sellingPrice: 150, category: "Flowers" },
+    { id: 2, name: "Organic Fertilizer", image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&q=80&w=500", originalPrice: 600, sellingPrice: 450, category: "Gardening Tools" },
+    { id: 3, name: "Hand Trowel", image: "https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=500", originalPrice: 250, sellingPrice: 150, category: "Flowers" },
+    { id: 4, name: "Neem Oil Pest Control", image: "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&q=80&w=500", originalPrice: 350, sellingPrice: 250, category: "Vegetables" },
+    { id: 5, name: "Neem Oil Pest Control", image: "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&q=80&w=500", originalPrice: 350, sellingPrice: 250, category: "Fruits" },
+    { id: 6, name: "Neem Oil Pest Control", image: "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&q=80&w=500", originalPrice: 350, sellingPrice: 250, category: "Pots" },
   ];
 
   const categories = ['All', ...new Set(products.map(p => p.category))];
@@ -87,7 +87,7 @@ ${product.image}`;
   
 
   return (
-    <div className="bg-gray-50 min-h-screen pt-28 pb-20">
+    <div className="bg-gray-50 min-h-screen pt-33 pb-20">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         
         {/* --- HEADER & MOBILE FILTER TOGGLE --- */}
