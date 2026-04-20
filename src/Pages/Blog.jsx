@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -38,6 +38,7 @@ const Blog = () => {
     }
   ];
 
+
   return (
     <div className="bg-[#fdfdfb] pb-20">
         <BreadcrumbHero title="Our Blog" />
@@ -49,7 +50,7 @@ const Blog = () => {
               key={blog.id} 
               className="group cursor-pointer bg-white rounded-[2.5rem] overflow-hidden shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-slate-100" 
               data-aos="fade-up" 
-              data-aos-delay={index * 100}
+              s-delay={index * 100}
               onClick={() => navigate(`/blog/${blog.id}`)}
             >
               {/* Image Section */}
@@ -67,6 +68,7 @@ const Blog = () => {
                 <h3 className="text-xl md:text-2xl font-bold text-[#132A13] mb-4 group-hover:text-[#4F772D] transition-colors line-clamp-2 font-heading">
                   {blog.title}
                 </h3>
+
                 <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-3">
                     {blog.desc}
                 </p>
